@@ -4,9 +4,10 @@ import Product from './Product';
 export default class ProductList extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
+        <h1 className="text-center py-5">Our Product</h1>
         <Product />
-      </div>
+      </React.Fragment>
     )
   }
 }
