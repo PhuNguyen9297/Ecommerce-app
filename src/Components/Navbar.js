@@ -9,7 +9,7 @@ export default class Navbar extends Component {
           <img src="https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/shoeprints-32.png" 
             alt="icon" className="navbar-brand" height="50px" weight="50px"/>
         </Link>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
     aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
