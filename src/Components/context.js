@@ -17,7 +17,7 @@ class ProductProvider extends Component {
   render() {
     return (
       <ProductContext.Provider value={{
-        ...this.state,
+        products:this.state.products,
         handleDetail:this.handleDetail,
         addToCart:this.addToCart
       }}>
