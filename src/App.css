@@ -9,9 +9,19 @@ body{
     text-transform: uppercase;
 }
 
+/* navbar */
 .navbar-custom{
     background-color: #FE7D55;
 }
+.nav-text{
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: rgba(255, 252, 244, 0.76);
+}
+.nav-text:hover{
+    color: white;
+}
+/*  */
 
 .btn-custom{
     font-size: 1.2rem;
@@ -28,16 +38,6 @@ body{
     background-color: #B15836;
     border: 0.1rem solid #FFFCF4;
     color: #FFFCF4;
-}
-
-.nav-text{
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: rgba(255, 252, 244, 0.76);
-}
-
-.nav-text:hover{
-    color: white;
 }
 
 /* cart btn style and transition */

@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { ProductConsumer } from './context';
+import PropTypes from 'prop-types';
 
 export default class Product extends Component {
   render() {
-    const { id, img, name, price, inCart } = this.props.product;
+    const { id, img, name, price, detail, inCart } = this.props.product;
     return (
       <div className="col-9 col-sm-6 col-md-4 mx-auto mb-5">
-        <div className="card" onClick={() => console.log("")}>
+        <div className="card" onClick={() => console.log(this.props.product)}>
           <div className="img-container">
             <Link to="/detail">
               <img className="card-img-top p-5" src={img} alt={name}></img>
@@ -29,3 +30,14 @@ export default class Product extends Component {
     )
   }
 }
+
+Product.propTypes = {
+  product: PropTypes.shape({
+    id: PropTypes.number,
+    img: PropTypes.string,
+    name: PropTypes.string,
+    price: PropTypes.number,
+    detail: PropTypes.string,
+    inCart: PropTypes.bool
+  }).isRequired
+};
