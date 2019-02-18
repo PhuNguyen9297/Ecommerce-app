@@ -5,7 +5,8 @@ const ProductContext = React.createContext();
 
 class ProductProvider extends Component {
   state={
-    products: []
+    products: [],
+    productDetail: {}
   };
   componentDidMount(){
     this.setProduct();
@@ -19,8 +20,13 @@ class ProductProvider extends Component {
       products:tempProd
     })
   }
-  handleDetail(){
-    console.log("hello detail");
+  getItem = (id) => this.state.products.find(val => val.id == id);
+
+  handleDetail = (id ) => {
+    let detail = this.getItem(id);
+    this.setState({
+      productDetail: detail
+    })
   };
   addToCart(){
     console.log("hello Cart");
@@ -29,6 +35,7 @@ class ProductProvider extends Component {
     return (
       <ProductContext.Provider value={{
         products: this.state.products,
+        productDetail: this.state.productDetail,
         handleDetail:this.handleDetail,
         addToCart:this.addToCart
       }}>
