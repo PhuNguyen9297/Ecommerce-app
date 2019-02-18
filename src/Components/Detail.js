@@ -9,13 +9,25 @@ export default class Detail extends Component {
         {value => {
           const { id, detail, img, name, price, inCart } = value.productDetail;
           return (
-            <div className="container my-3">
+            <div className="container my-5">
               <div className="row">
-                <img src={img} alt={name} className="col-9 col-md-4" height="400px" />
-                <div className="col-3 col-md-4">
+                <img src={img} alt={name} className="col-8 col-lg-5 mx-auto" height="400px" />
+                <div className="col-8 col-lg-4 mx-auto">
                   <h5>{name}</h5>
                   <p>{detail}</p>
-                  <div className="d-flex justify-content-between">
+                  <p>Price: ${price}</p>
+                  <div className="d-flex justify-content-around">
+                    <Link to="/">
+                      <button className="buy-now-btn btn">
+                        <i class="fas fa-cash-register mr-2"></i>
+                        BUY NOW
+                    </button>
+                    </Link>
+                    <button className="add-to-cart-btn btn">
+                      Add to cart
+                  </button>
+                  </div>
+                  <div className="d-flex justify-content-around mt-5">
                     <button className="btn-light">
                       <p className="m-0"><i class="fab fa-twitter mr-1 text-primary"></i>Twitter</p>
                     </button>
@@ -31,20 +43,14 @@ export default class Detail extends Component {
                   </div>
                   <div className="border bg-white my-3 review-box">
                     <p className="m-2">Rating</p>
-                      <p><i class="fab fa-2x fa-rocketchat text-success mx-2"></i>Review</p>
+                    <p><i class="fab fa-2x fa-rocketchat text-success mx-2"></i>Review</p>
                   </div>
                 </div>
-                <div className="col-3 col-md-3">
-                <div className="bg-white">
-                  <p className="text-center">$ {price}</p>
-                </div>
-                <div className="bg-white">
-                  <p>Quantity</p>
-                  <form className="form-inline">
-                    <input type="number" placeholder="1">
-                    </input>
-                  </form>
-                </div>
+                <div className="col-8 col-lg-3 mx-auto ">
+                  <p className="border m-0"><i class="fas fa-truck right-icon"></i>Transport policy</p>
+                  <p className="border m-0"><i class="fab fa-cc-paypal right-icon"></i>Easy payment</p>
+                  <p className="border m-0"><i class="fas fa-fist-raised right-icon"></i>Prestigious seller</p>
+                  <p className="border m-0"><i class="fas fa-phone-volume right-icon"></i>Contact us</p>
                 </div>
               </div>
             </div>
