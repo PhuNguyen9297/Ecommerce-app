@@ -23,7 +23,10 @@ export default class Detail extends Component {
                         BUY NOW
                     </button>
                     </Link>
-                    <button className="add-to-cart-btn btn" disabled={inCart ? true : false} onClick={() => value.addToCart(id)}>
+                    <button className="add-to-cart-btn btn" disabled={inCart ? true : false} onClick={() => {
+                      value.addToCart(id);
+                      value.openModal(id);
+                    }}>
                       {inCart ? "Already in cart" : "Add to cart"}
                     </button>
                   </div>

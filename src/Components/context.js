@@ -1,31 +1,31 @@
 import React, { Component } from 'react'
-import {data} from './data';
+import { data } from './data';
 
 const ProductContext = React.createContext();
 
 class ProductProvider extends Component {
-  state={
+  state = {
     products: [],
     productDetail: {},
     cart: [],
-    modalOpen: true,
+    modalState: false,
     modalProduct: {}
   };
-  componentDidMount(){
+  componentDidMount() {
     this.setProduct();
   }
-  setProduct(){
+  setProduct() {
     let tempProd = [];
     data.forEach(val => {
-      tempProd = [...tempProd, {...val}];
+      tempProd = [...tempProd, { ...val }];
     })
-    this.setState({ 
-      products:tempProd
+    this.setState({
+      products: tempProd
     })
   }
   getItem = (id) => this.state.products.find(val => val.id === id);
 
-  handleDetail = (id ) => {
+  handleDetail = (id) => {
     let detail = this.getItem(id);
     this.setState({
       productDetail: detail
@@ -33,8 +33,8 @@ class ProductProvider extends Component {
   };
   addToCart = (id) => {
     let tempProd = [...this.state.products];
-    for(let i =0; i<tempProd.length; i++){
-      if(tempProd[i].id === id){
+    for (let i = 0; i < tempProd.length; i++) {
+      if (tempProd[i].id === id) {
         let item = tempProd[i];
         tempProd[i].inCart = true;
         tempProd[i].count = 1;
@@ -45,28 +45,27 @@ class ProductProvider extends Component {
       }
     }
   };
-  modalOpen = (id) =>{
+  openModal = (id) => {
     let tempProd = this.getItem(id);
     this.setState({
-      modalProduct:tempProd,
-      modalOpen: true
+      modalProduct: tempProd,
+      modalState: true
     })
   }
 
-  closeModal = () =>{
+  closeModal = () => {
     this.setState({
-      modalOpen: false
+      modalState: false
     })
   }
   render() {
     return (
       <ProductContext.Provider value={{
-        products: this.state.products,
-        productDetail: this.state.productDetail,
-        handleDetail:this.handleDetail,
-        addToCart:this.addToCart,
+        ...this.state,
+        handleDetail: this.handleDetail,
+        addToCart: this.addToCart,
         closeModal: this.closeModal,
-        modalOpen:this.modalOpen
+        openModal: this.openModal
       }}>
         {this.props.children}
       </ProductContext.Provider>
@@ -76,4 +75,4 @@ class ProductProvider extends Component {
 
 const ProductConsumer = ProductContext.Consumer;
 
-export {ProductConsumer, ProductProvider};
+export { ProductConsumer, ProductProvider };
