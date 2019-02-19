@@ -5,7 +5,9 @@ export const data = [
         name: "Men's Nike Varsity Compete Trainer Training Shoes",
         price: 99.99,
         detail: "Built for traction on multiple surfaces, the Nike® Varsity Compete Trainer is ready to take you and your workout to the next level. A mix of skin overlays and mesh enhance durability in the upper, while an EVA midsole provides a soft, stable ride. The nubby, rubber outsole gives you solid grip and stability.",
-        inCart: true
+        inCart: false,
+        count: 0,
+        total: 0
     },
     {
         id: 2,
@@ -13,7 +15,9 @@ export const data = [
         name: "Men's Wolverine Bulldozer Work Boots",
         price: 79.98,
         detail: "Wolverine Men's Leather Work Boots. The Men's Bulldozer work boot is exclusive to Shoe Carnival! The sleek leather upper and rugged lacing make this boot transition from protecting you at work to casual outings on the weekends.",
-        inCart: false
+        inCart: false,
+        count: 0,
+        total: 0
     },
     {
         id: 3,
@@ -21,7 +25,9 @@ export const data = [
         name: "Men's Nike Air Monarch IV Training Shoes",
         price: 65.00,
         detail: "The Nike Air Monarch IV Men's training shoe delivers lightweight cushioning, solid support and excellent traction, along with an updated, sleek design built for rigorous training on the field and in the gym.",
-        inCart: false
+        inCart: false,
+        count: 0,
+        total: 0
     },
     {
         id: 4,
@@ -29,7 +35,9 @@ export const data = [
         name: "Adults' Converse Chuck Taylor All Star Canvas Ox Core Sneakers",
         price: 55.00,
         detail: "Adult Converse Chuck Taylor Canvas Sneakers. The classic Chuck Taylor sneaker has a following that has lasted for decades. That's why it's no surprise that adults and kids alike have a pair of Chucks in every color and style. What originated as a basketball sneaker is now the most versatile dress, casual, anytime-you-want-to-wear-it shoe. Catch the office off guard when you pair these with your professional wardrobe, or wear them to any of your casual weekend outings.",
-        inCart: false
+        inCart: false,
+        count: 0,
+        total: 0
     },
     {
         id: 5,
@@ -37,7 +45,9 @@ export const data = [
         name: "Men's Wolverine Rancher Square Soft Toe W08181 Work Boots",
         price: 94.98,
         detail: "Get rugged performance with western style each time you pull-on the Wolverine® Rancher Square Soft Toe W08181. These durable leather boots feature an easy pull-on design, lightly cushioned insole, cushioned EVA midsole, slip-resistant outsole, and a soft leather boot lining to provide durability from the inside out.",
-        inCart: false
+        inCart: false,
+        count: 0,
+        total: 0
     },
     {
         id: 6,
@@ -45,7 +55,9 @@ export const data = [
         name: "Men's Vans Ward Skate Shoes",
         price: 59.99,
         detail: "Perfect your casual style in the Vans Ward! These skate shoes feature a low-profile design, flexible vulcanized construction, and Original Waffle outsole for superior grip. Keep your skater style fresh with the Vans Ward!",
-        inCart: false
+        inCart: false,
+        count: 0,
+        total: 0
     },
     {
         id: 7,
@@ -53,7 +65,9 @@ export const data = [
         name: "Men's New Balance MRL005 Retro Sneakers",
         price: 49.98,
         detail: "Get style and comfort in the New Balance® MRL005! These retro running shoes inspired sneakers have a combination upper with transitional textures for added style and comfort. The cushioned insole, lightweight midsole, and durable outsole make the MRL005 by New Balance® the perfect casual sneaker for a day running errands or hanging out with friends.",
-        inCart: false
+        inCart: false,
+        count: 0,
+        total: 0
     },
     {
         id: 8,
@@ -61,7 +75,9 @@ export const data = [
         name: "Men's Freeman Brent Chukka Boots",
         price: 49.98,
         detail: "Step into comfort and style with the Freeman® Brent! These comfortable chukka boots have a stylish synthetic leather upper with textured, stitching, and stud style accents. The Derby style lace-up closure gives you a secure fit, while the cushioned insole and padded sides hug your foot for long-lasting comfort. Transition from office wear into casual wear with ease when you lace-up the Freeman® Brent!",
-        inCart: false
+        inCart: false,
+        count: 0,
+        total: 0
     },
     {
         id: 9,
@@ -69,7 +85,9 @@ export const data = [
         name: "Men's Nike Lunar Fingertrap Training Shoes",
         price: 69.98,
         detail: "Get the most from your training shoe with the Nike Lunar Fingertrap! These athletic trainers combine a Lunarlon midsole with Dynamic Fit technology at the midfoot for a plush and glove-like fit, while a multidirectional, rubber outsole gives you the traction needed for your training moves.",
-        inCart: false
+        inCart: false,
+        count: 0,
+        total: 0
     },
     {
         id: 10,
@@ -77,6 +95,8 @@ export const data = [
         name: "Men's Nike Air Max Sequent 3 Running Shoes",
         price: 79.98,
         detail: "For the perfect combination of durability, style, and outstanding performance, lace-up the modern Nike Air Max Sequent 3! These sneakers feature 4-way stretch woven uppers with seamless overlays, Max Air unit in the heel for resilient cushioning, and partial bootie construction. For a running shoe that will keep you going strong, look no further than the Nike Air Max Sequent 3!",
-        inCart: false
+        inCart: false,
+        count: 0,
+        total: 0
     }
 ]

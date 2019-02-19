@@ -19,38 +19,38 @@ export default class Detail extends Component {
                   <div className="d-flex justify-content-around">
                     <Link to="/">
                       <button className="buy-now-btn btn">
-                        <i class="fas fa-cash-register mr-2"></i>
+                        <i className="fas fa-cash-register mr-2"></i>
                         BUY NOW
                     </button>
                     </Link>
-                    <button className="add-to-cart-btn btn">
-                      Add to cart
-                  </button>
+                    <button className="add-to-cart-btn btn" disabled={inCart ? true : false} onClick={() => value.addToCart(id)}>
+                      {inCart ? "Already in cart" : "Add to cart"}
+                    </button>
                   </div>
                   <div className="d-flex justify-content-around mt-5">
                     <button className="btn-light">
-                      <p className="m-0"><i class="fab fa-twitter mr-1 text-primary"></i>Twitter</p>
+                      <p className="m-0"><i className="fab fa-twitter mr-1 text-primary"></i>Twitter</p>
                     </button>
                     <button className="btn-light">
-                      <p className="m-0"><i class="fab fa-facebook-f mr-1 text-primary"></i>Share</p>
+                      <p className="m-0"><i className="fab fa-facebook-f mr-1 text-primary"></i>Share</p>
                     </button>
                     <button className="btn-light">
-                      <p className="m-0"><i class="fab fa-google-plus-g mr-1 text-danger"></i>Google</p>
+                      <p className="m-0"><i className="fab fa-google-plus-g mr-1 text-danger"></i>Google</p>
                     </button>
                     <button className="btn-light">
-                      <p className="m-0"><i class="fab fa-pinterest mr-1 text-danger"></i>Pinterest</p>
+                      <p className="m-0"><i className="fab fa-pinterest mr-1 text-danger"></i>Pinterest</p>
                     </button>
                   </div>
                   <div className="border bg-white my-3 review-box">
                     <p className="m-2">Rating</p>
-                    <p><i class="fab fa-2x fa-rocketchat text-success mx-2"></i>Review</p>
+                    <p><i className="fab fa-2x fa-rocketchat text-success mx-2"></i>Review</p>
                   </div>
                 </div>
                 <div className="col-8 col-lg-3 mx-auto ">
-                  <p className="border m-0"><i class="fas fa-truck right-icon"></i>Transport policy</p>
-                  <p className="border m-0"><i class="fab fa-cc-paypal right-icon"></i>Easy payment</p>
-                  <p className="border m-0"><i class="fas fa-fist-raised right-icon"></i>Prestigious seller</p>
-                  <p className="border m-0"><i class="fas fa-phone-volume right-icon"></i>Contact us</p>
+                  <p className="border m-0"><i className="fas fa-truck right-icon"></i>Transport policy</p>
+                  <p className="border m-0"><i className="fab fa-cc-paypal right-icon"></i>Easy payment</p>
+                  <p className="border m-0"><i className="fas fa-fist-raised right-icon"></i>Prestigious seller</p>
+                  <p className="border m-0"><i className="fas fa-phone-volume right-icon"></i>Contact us</p>
                 </div>
               </div>
             </div>
