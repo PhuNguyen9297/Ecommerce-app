@@ -35,7 +35,6 @@ class ProductProvider extends Component {
     let tempProd = [...this.state.products];
     for (let i = 0; i < tempProd.length; i++) {
       if (tempProd[i].id === id) {
-        let item = tempProd[i];
         tempProd[i].inCart = true;
         tempProd[i].count = 1;
         this.setState({
