@@ -57,6 +57,42 @@ class ProductProvider extends Component {
       modalState: false
     })
   }
+
+  plus = (id) => {
+    let tempProd = [...this.state.cart];
+    for (let i = 0; i < tempProd.length; i++) {
+      if (tempProd[i].id === id) {
+        tempProd[i].count += 1;
+        this.setState({
+          cart: tempProd
+        })
+      }
+    }
+  }
+  minus = (id) => {
+    let tempProd = [...this.state.cart];
+    for (let i = 0; i < tempProd.length; i++) {
+      if (tempProd[i].id === id) {
+        if(tempProd[i].count>1){
+          tempProd[i].count-=1;
+        }
+        this.setState({
+          cart: tempProd
+        })
+      }
+    }
+  }
+  remove = (id) =>{
+    let tempProd = [...this.state.cart];
+    for (let i = 0; i < tempProd.length; i++) {
+      if(tempProd[i].id === id){
+        tempProd.splice(i,1);
+        this.setState({
+          cart: tempProd
+        })
+      }
+    }
+  }
   render() {
     return (
       <ProductContext.Provider value={{
@@ -64,7 +100,10 @@ class ProductProvider extends Component {
         handleDetail: this.handleDetail,
         addToCart: this.addToCart,
         closeModal: this.closeModal,
-        openModal: this.openModal
+        openModal: this.openModal,
+        plus: this.plus,
+        minus: this.minus,
+        remove: this.remove
       }}>
         {this.props.children}
       </ProductContext.Provider>
