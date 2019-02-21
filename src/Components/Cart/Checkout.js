@@ -16,7 +16,7 @@ export default class Checkout extends Component {
                   sum += prod.price * prod.count, 0).toFixed(2)}</p>
                 <div className="d-flex justify-content-end">
                   <form className="form-inline">
-                    <label for="coupon">If you have a coupon code, please enter it here</label>
+                    <label htmlFor="coupon">If you have a coupon code, please enter it here</label>
                     <input type="text" id="coupon" className="m-1 form-control"></input>
                     <button type="submit" className="btn btn-primary">APPLY</button>
                   </form>

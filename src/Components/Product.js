@@ -7,7 +7,7 @@ export default class Product extends Component {
   render() {
     const { id, img, name, price, inCart } = this.props.product;
     return (
-      <div className="col-9 col-sm-6 col-md-4 mx-auto mb-5">
+      <div className="col-10 col-sm-6 col-md-6 col-lg-4 mx-auto mb-5">
         <div className="card">
           <ProductConsumer>
             {value => (<div className="img-container" onClick={() => value.handleDetail(id)}>

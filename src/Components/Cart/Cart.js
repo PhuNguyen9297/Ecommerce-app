@@ -28,7 +28,7 @@ export default class Cart extends Component {
             }
             else {
               return (
-                <h1 className="text-center">emty</h1>
+                <div className="container p-5 bg-white my-3"></div>
               )
             }
           }}
