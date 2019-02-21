@@ -3,8 +3,9 @@ import React, { Component } from 'react'
 export default class Default extends Component {
   render() {
     return (
-      <div>
-        Page not found
+      <div className="container text-title text-center my-5">
+        <h1 className="display-4">EROR 404</h1>
+        <h3>Page not found</h3>
       </div>
     )
   }

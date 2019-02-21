@@ -17,8 +17,8 @@ export default class Detail extends Component {
                   <p>{detail}</p>
                   <p>Price: ${price}</p>
                   <div className="d-flex justify-content-around">
-                    <Link to="/">
-                      <button className="buy-now-btn btn">
+                    <Link to="/cart">
+                      <button className="buy-now-btn btn" onClick={() => value.addToCart(id)}>
                         <i className="fas fa-cash-register mr-2"></i>
                         BUY NOW
                     </button>

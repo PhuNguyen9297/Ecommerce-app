@@ -21,7 +21,7 @@ export default class CartItem extends Component {
                     <button className="count-btn btn-secondary" onClick={() => minus(id)}><i class="fas fa-minus"></i></button>
                     <button className="count-btn btn-secondary" onClick={() => plus(id)}><i class="fas fa-plus"></i></button>
                 </div>
-                <p className="col-2 text-center">{price}</p>
+                <p className="col-2 text-center">${price}</p>
                 <i className="fas fa-times fa-2x text-danger col-1 text-right" onClick={() => remove(id)}></i>
             </div>
         )

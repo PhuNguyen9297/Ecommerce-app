@@ -24,7 +24,7 @@ export default class Modal extends Component {
                                         <span className="ml-3 align-top mr-5">{name}</span>
                                         <p>Price<br></br> ${price}</p>
                                     </div>
-                                    <div className="d-flex justify-content-between mx-3 my-2">
+                                    <div className="d-flex justify-content-between mx-3 my-4">
                                         <Link to="/">
                                             <button type="button" className="btn btn-warning" onClick={closeModal}>Countinue shopping</button>
                                         </Link>

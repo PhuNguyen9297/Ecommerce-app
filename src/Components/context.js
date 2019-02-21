@@ -93,6 +93,11 @@ class ProductProvider extends Component {
       }
     }
   }
+  emtyCart = () =>{
+    this.setState({
+      cart: []
+    })
+  }
   render() {
     return (
       <ProductContext.Provider value={{
@@ -103,7 +108,8 @@ class ProductProvider extends Component {
         openModal: this.openModal,
         plus: this.plus,
         minus: this.minus,
-        remove: this.remove
+        remove: this.remove,
+        emtyCart: this.emtyCart
       }}>
         {this.props.children}
       </ProductContext.Provider>
